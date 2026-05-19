@@ -1,0 +1,56 @@
+{
+  "MOTIVATIONAL_QUOTES": [
+    {
+      "title": "Setiap Hari Adalah Awal Baru",
+      "body": "Setiap pagi adalah halaman kosong. Kamu yang memilih apa yang ditulis di sana hari ini."
+    },
+    {
+      "title": "Progres, Bukan Kesempurnaan",
+      "body": "Lebih baik melangkah pelan ke arah yang benar daripada berlari tanpa tujuan. Konsistensi mengalahkan intensitas."
+    },
+    {
+      "title": "Hari Ini Versi Terbaikmu",
+      "body": "Bandingkan dirimu hari ini dengan dirimu kemarin, bukan dengan orang lain. Selama kamu lebih baik 1%, itu sudah pertumbuhan."
+    }
+  ],
+  "LOFI_FACTS": [
+    {
+      "title": "Fakta Otak & Musik",
+      "body": "Mendengarkan musik instrumental dengan tempo 60–70 BPM membantu otak masuk ke gelombang alfa yang ideal untuk fokus mendalam."
+    },
+    {
+      "title": "Kunang-kunang Sinkron",
+      "body": "Beberapa spesies kunang-kunang bisa berkedip secara serempak di satu pohon. Fenomena ini termasuk salah satu contoh paling indah dari sinkronisasi alami di alam."
+    }
+  ],
+  "STUDY_WITH_ME": [
+    {
+      "title": "Pomodoro Set Pertama",
+      "body": "Yuk mulai sesi 25 menit. Tutup notifikasi, taruh HP jauh dari jangkauan. Tarik napas, fokus pada satu task — lanjut!"
+    },
+    {
+      "title": "Istirahat 5 Menit",
+      "body": "Selamat, satu sesi selesai! Berdiri, regangkan tubuh, minum air. 5 menit lagi kita lanjut bareng."
+    }
+  ],
+  "TRIVIA_QNA": [
+    {
+      "title": "Trivia: Bahasa",
+      "body": "PERTANYAAN: Apa bahasa dengan jumlah huruf alfabet terbanyak?\nJAWABAN: Khmer (Kamboja) dengan 74 huruf."
+    },
+    {
+      "title": "Trivia: Teknologi",
+      "body": "PERTANYAAN: Apa nama lengkap dari singkatan 'HTTP'?\nJAWABAN: HyperText Transfer Protocol."
+    }
+  ],
+  "MEDITATION_GUIDE": [
+    {
+      "title": "Napas Kotak (Box Breathing)",
+      "body": "Tarik napas 4 detik. Tahan 4 detik. Hembuskan 4 detik. Tahan 4 detik lagi. Ulangi pelan-pelan empat kali."
+    },
+    {
+      "title": "Body Scan Singkat",
+      "body": "Pejamkan mata. Rasakan tubuhmu menyentuh kursi. Mulai dari ujung kaki, perlahan naikkan kesadaran sampai ke ubun-ubun. Lepaskan ketegangan di setiap titik."
+    }
+  ]
+}
