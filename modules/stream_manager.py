@@ -7,8 +7,10 @@ import shutil
 import subprocess
 import threading
 import time
+
 from pathlib import Path
 from typing import IO, Optional
+
 
 from config import Config
 
@@ -170,21 +172,28 @@ class StreamManager:
         )
         logger.debug("FFmpeg command: %s", " ".join(cmd))
 
-        # On Windows, pass_fds is not supported. Use stdin=PIPE workaround
+# On Windows, pass_fds is not supported. Use stdin=PIPE workaround
         # would lose the second input stream — for Windows we degrade
         # gracefully to a single muxed FD by closing audio pipe and falling
         # back to silent track in main loop. For typical Linux deployment
         # pass_fds works as expected.
+        import platform
+        IS_WINDOWS = platform.system() == "Windows"
         pass_fds: tuple[int, ...] = (self._video_pipe_r, self._audio_pipe_r)
         try:
-            self.process = subprocess.Popen(
-                cmd,
-                stdin=subprocess.DEVNULL,
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.PIPE,
-                pass_fds=pass_fds,
-                close_fds=True,
-            )
+            if IS_WINDOWS:
+                process = subprocess.Popen(
+                    cmd,
+                    stdin=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                )
+            else:
+                process = subprocess.Popen(
+                    cmd,
+                    stdin=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    pass_fds=pass_fds,
+                )
         except (ValueError, OSError) as exc:
             logger.warning(
                 "pass_fds unsupported (%s). Falling back to muxed stdin pipe.", exc
